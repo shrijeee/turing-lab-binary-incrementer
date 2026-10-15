@@ -4,7 +4,7 @@
 
 An interactive Turing Machine Transducer that increments binary numbers using state transitions and tape operations. Built for Theory of Computation (TOC), featuring step-by-step simulation, tape visualization, and transition tracing.
 
-![Turing Lab Screenshot](./docs/screenshot.png)
+![Turing Lab — Binary Incrementer Simulator](https://raw.githubusercontent.com/shrijeee/turing-lab-binary-incrementer/main/docs/screenshot.png)
 
 ---
 
