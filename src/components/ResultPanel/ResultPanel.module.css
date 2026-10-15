@@ -1,0 +1,118 @@
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.headerIcon {
+  color: var(--color-text-secondary);
+  display: flex;
+}
+
+.headerTitle {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+}
+
+.body {
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.value.accent {
+  color: var(--color-text-accent);
+  font-size: 20px;
+}
+
+.value.small {
+  font-size: 13px;
+}
+
+.verificationRow {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  margin-top: 4px;
+}
+
+.verificationRow.pass {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.verificationRow.fail {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.verificationIcon {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.verificationIcon.pass {
+  color: var(--color-success);
+}
+
+.verificationIcon.fail {
+  color: var(--color-error);
+}
+
+.verificationText {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.verificationText.pass {
+  color: var(--color-success);
+}
+
+.verificationText.fail {
+  color: var(--color-error);
+}
+
+.verificationDetail {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-left: auto;
+  font-family: var(--font-mono);
+}

@@ -1,0 +1,101 @@
+/* Load Inter and JetBrains Mono from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Design system tokens */
+:root {
+  --color-bg: #0d0f12;
+  --color-surface: #141720;
+  --color-surface-raised: #1c2030;
+  --color-border: #252c3e;
+  --color-border-subtle: #1e2436;
+
+  --color-accent: #3b82f6;       /* electric blue */
+  --color-accent-glow: rgba(59, 130, 246, 0.15);
+  --color-accent-dim: #1d4ed8;
+
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #4b5563;
+  --color-text-accent: #60a5fa;
+
+  /* tape cell colors */
+  --color-cell-default-bg: #1c2030;
+  --color-cell-default-text: #e2e8f0;
+  --color-cell-head-bg: #1e3a5f;
+  --color-cell-head-border: #3b82f6;
+  --color-cell-modified-bg: #1a3020;
+  --color-cell-modified-border: #22c55e;
+  --color-cell-blank-text: #374151;
+
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, 'SF Mono', monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+
+  --transition-fast: 120ms ease;
+  --transition-normal: 200ms ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-accent-glow);
+  color: var(--color-text-primary);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}

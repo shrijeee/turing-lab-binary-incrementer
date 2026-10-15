@@ -1,0 +1,129 @@
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.controlGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  color: var(--color-text-primary);
+  border-color: var(--color-text-muted);
+  background: var(--color-surface-raised);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn.danger {
+  color: var(--color-error);
+}
+
+.btn.danger:hover:not(:disabled) {
+  border-color: var(--color-error);
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.speedGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speedLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.speedBtns {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.speedBtn {
+  padding: 5px 10px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.speedBtn:last-child {
+  border-right: none;
+}
+
+.speedBtn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-raised);
+}
+
+.speedBtn.active {
+  background: var(--color-accent-glow);
+  color: var(--color-text-accent);
+}
+
+.stepInfo {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.stepInfo span {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
