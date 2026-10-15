@@ -2,6 +2,7 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
   flex: 1;
 }
@@ -11,6 +12,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
+  background: var(--color-surface-raised);
   border-bottom: 1px solid var(--color-border-subtle);
 }
 
@@ -23,7 +25,7 @@
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   color: var(--color-text-secondary);
 }
 
@@ -49,7 +51,7 @@ th {
   text-align: left;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--color-text-muted);
   background: var(--color-surface);

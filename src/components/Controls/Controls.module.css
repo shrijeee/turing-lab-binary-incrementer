@@ -2,6 +2,7 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   padding: 12px 14px;
   display: flex;
   align-items: center;
@@ -49,8 +50,8 @@
 }
 
 .btn.primary:hover:not(:disabled) {
-  background: #2563eb;
-  border-color: #2563eb;
+  background: var(--color-accent-dim);
+  border-color: var(--color-accent-dim);
 }
 
 .btn.danger {
@@ -59,7 +60,7 @@
 
 .btn.danger:hover:not(:disabled) {
   border-color: var(--color-error);
-  background: rgba(239, 68, 68, 0.08);
+  background: rgba(181, 62, 57, 0.08);
 }
 
 .divider {
@@ -78,7 +79,7 @@
 .speedLabel {
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   color: var(--color-text-muted);
   font-weight: 600;
   white-space: nowrap;

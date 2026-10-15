@@ -1,45 +1,43 @@
-/* Load Inter and JetBrains Mono from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-/* Design system tokens */
 :root {
-  --color-bg: #0d0f12;
-  --color-surface: #141720;
-  --color-surface-raised: #1c2030;
-  --color-border: #252c3e;
-  --color-border-subtle: #1e2436;
+  color-scheme: light;
+  --color-bg: #f1f4f1;
+  --color-surface: #ffffff;
+  --color-surface-raised: #f5f7f5;
+  --color-border: #d5ddd7;
+  --color-border-subtle: #e7ece8;
 
-  --color-accent: #3b82f6;       /* electric blue */
-  --color-accent-glow: rgba(59, 130, 246, 0.15);
-  --color-accent-dim: #1d4ed8;
+  --color-accent: #c64c32;
+  --color-accent-glow: rgba(198, 76, 50, 0.11);
+  --color-accent-dim: #9f3825;
 
-  --color-success: #22c55e;
-  --color-error: #ef4444;
-  --color-warning: #f59e0b;
+  --color-success: #24765d;
+  --color-error: #b53e39;
+  --color-warning: #a9671c;
 
-  --color-text-primary: #e2e8f0;
-  --color-text-secondary: #94a3b8;
-  --color-text-muted: #4b5563;
-  --color-text-accent: #60a5fa;
+  --color-text-primary: #1c2924;
+  --color-text-secondary: #53625b;
+  --color-text-muted: #849089;
+  --color-text-accent: #a33c28;
 
-  /* tape cell colors */
-  --color-cell-default-bg: #1c2030;
-  --color-cell-default-text: #e2e8f0;
-  --color-cell-head-bg: #1e3a5f;
-  --color-cell-head-border: #3b82f6;
-  --color-cell-modified-bg: #1a3020;
-  --color-cell-modified-border: #22c55e;
-  --color-cell-blank-text: #374151;
+  --color-cell-default-bg: #f5f7f5;
+  --color-cell-default-text: #24312b;
+  --color-cell-head-bg: #253a32;
+  --color-cell-head-border: #c64c32;
+  --color-cell-modified-bg: #e8f4ed;
+  --color-cell-modified-border: #559b78;
+  --color-cell-blank-text: #aeb8b1;
 
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, 'SF Mono', monospace;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', 'Cascadia Code', ui-monospace, 'SF Mono', monospace;
+  --font-sans: 'Space Grotesk', 'Segoe UI', sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 8px;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+  --shadow-sm: 0 1px 2px rgba(28, 41, 36, 0.06), 0 3px 10px rgba(28, 41, 36, 0.035);
+  --shadow-md: 0 10px 28px rgba(28, 41, 36, 0.08);
 
   --transition-fast: 120ms ease;
   --transition-normal: 200ms ease;
@@ -55,35 +53,34 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bg);
 }
 
 body {
   background-color: var(--color-bg);
+  background-image: linear-gradient(rgba(51, 83, 68, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(51, 83, 68, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   line-height: 1.5;
   min-height: 100vh;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: var(--color-bg); }
-::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-track { background: var(--color-surface-raised); }
+::-webkit-scrollbar-thumb { background: #bac5bd; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
 
-/* Focus ring for accessibility */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
-/* Selection */
 ::selection {
   background: var(--color-accent-glow);
   color: var(--color-text-primary);
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
